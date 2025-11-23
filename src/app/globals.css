@@ -1,0 +1,491 @@
+@import "tailwindcss";
+
+:root {
+  --background: 210 40% 98%;
+  --background-secondary: 210 40% 96%;
+  --foreground: 222.2 84% 4.9%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+
+  --secondary: 250 84% 64%;
+  --secondary-foreground: 210 40% 98%;
+
+  --accent: 199 89% 48%;
+  --accent-foreground: 210 40% 98%;
+
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 221.2 83.2% 53.3%;
+
+  --radius: 0.5rem;
+}
+
+@theme {
+  --color-background: #f7f9fb;
+  --color-background-secondary: #f0f4f8;
+  --color-foreground: #010816;
+
+  --color-card: #ffffff;
+  --color-card-foreground: #010816;
+
+  --color-popover: #ffffff;
+  --color-popover-foreground: #010816;
+
+  --color-primary: #2462ea;
+  --color-primary-foreground: #f7f9fb;
+
+  --color-secondary: #6f56f0;
+  --color-secondary-foreground: #f7f9fb;
+
+  --color-accent: #0da2e7;
+  --color-accent-foreground: #f7f9fb;
+
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+
+  --color-destructive: #ee4444;
+  --color-destructive-foreground: #f7f9fb;
+
+  --color-border: #e2e8f0;
+  --color-input: #e2e8f0;
+
+  --color-bitcoin-pulse: #F7931A;
+
+
+  /* Dark Color Code  */
+  --color-dark-background: #0e1629;
+  --color-dark-background-secondary: #1d2739;
+  --color-dark-foreground: #f7f9fb;
+
+  --color-dark-card: #121c34;
+  --color-dark-card-foreground: #f7f9fb;
+
+  --color-dark-popover: #121c34;
+  --color-dark-popover-foreground: #f7f9fb;
+
+  --color-dark-primary: #3b82f5;
+  --color-dark-primary-foreground: #0f172a;
+
+  --color-dark-secondary: #4827ec;
+  --color-dark-secondary-foreground: #f7f9fb;
+
+  --color-dark-accent: #0da2e7;
+  --color-dark-accent-foreground: #f7f9fb;
+
+  --color-dark-muted: #1e293b;
+  --color-dark-muted-foreground: #94a3b7;
+
+  --color-dark-destructive: #7f1d1d;
+  --color-dark-destructive-foreground: #f7f9fb;
+
+  --color-dark-border: #25334a;
+  --color-dark-input: #25334a;
+  --color-dark-ring: #1d4dd7;
+
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --background: 210 40% 98%;
+    --background-secondary: 210 40% 96%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 250 84% 64%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 47% 11%;
+    --background-secondary: 217.2 32.6% 17%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 47% 14%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 47% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 250 84% 54%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 199 89% 48%;
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 22%;
+    --input: 217.2 32.6% 22%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+
+/* Arthalab-specific styles */
+.arthalab-gradient-bg {
+  @apply bg-gradient-to-br from-background to-background-secondary;
+}
+
+.dark .arthalab-gradient-bg {
+  @apply bg-gradient-to-br from-background via-background/90 to-background-secondary;
+}
+
+.arthalab-card {
+  @apply bg-card border border-border rounded-xl shadow-sm transition-all duration-300;
+}
+
+.dark .arthalab-card {
+  background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--card) / 0.8));
+  border: 1px solid hsl(var(--border));
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+  backdrop-filter: blur(12px);
+}
+
+.dark .arthalab-card:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  border: 1px solid hsl(var(--border) / 0.8);
+  background: linear-gradient(145deg, hsl(var(--card) / 0.9), hsl(var(--card) / 0.7));
+}
+
+.arthalab-card:hover {
+  @apply shadow-md;
+}
+
+.dark .arthalab-card:hover {
+  @apply shadow-lg shadow-primary/10;
+}
+
+.arthalab-glow {
+  @apply relative;
+}
+
+.arthalab-glow::before {
+  content: "";
+  @apply absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-secondary/50 rounded-xl blur opacity-30 transition-opacity duration-300;
+  z-index: -1;
+}
+
+.dark .arthalab-glow::before {
+  opacity: 0.15;
+}
+
+.arthalab-glow:hover::before {
+  @apply opacity-60;
+}
+
+.dark .arthalab-glow:hover::before {
+  opacity: 0.25;
+}
+
+.arthalab-shimmer {
+  @apply relative overflow-hidden;
+}
+
+.arthalab-shimmer::after {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full;
+  animation: shimmer 2s infinite;
+}
+
+.dark .arthalab-shimmer::after {
+  @apply via-white/10;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Bitcoin animation */
+.bitcoin-pulse {
+  animation: bitcoin-pulse 3s ease-in-out infinite;
+}
+
+@keyframes bitcoin-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(247, 147, 26, 0.5));
+  }
+
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 16px rgba(247, 147, 26, 0.7));
+  }
+}
+
+/* Chart styles */
+.arthalab-chart {
+  @apply rounded-xl overflow-hidden border border-border bg-card/50 backdrop-blur-sm;
+}
+
+.dark .arthalab-chart {
+  @apply border-muted/20 bg-card/30;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+
+  25% {
+    transform: translateY(-10px) translateX(5px);
+  }
+
+  50% {
+    transform: translateY(0) translateX(10px);
+  }
+
+  75% {
+    transform: translateY(10px) translateX(5px);
+  }
+}
+
+.animate-float {
+  animation: float 15s ease-in-out infinite;
+}
+
+.bg-dots {
+  @apply absolute inset-0 overflow-hidden z-0;
+}
+
+.dark .bg-dots {
+  background-image: radial-gradient(circle, rgba(99, 102, 241, 0.15) 1px, transparent 1px);
+}
+
+.section-hero {
+  @apply relative overflow-hidden;
+  background: radial-gradient(circle at 20% 20%, hsl(var(--background)) 0%, hsl(var(--background-secondary)) 100%);
+}
+
+.dark .section-hero {
+  background: radial-gradient(circle at 20% 20%, hsl(var(--background)), hsl(var(--background-secondary)));
+}
+
+.section-about {
+  @apply relative overflow-hidden bg-muted/30;
+}
+
+.dark .section-about {
+  background: linear-gradient(to bottom, hsl(var(--background)), hsl(var(--background-secondary)));
+}
+
+.section-features {
+  @apply relative overflow-hidden;
+  background: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(var(--background-secondary)) 100%);
+}
+
+.dark .section-features {
+  background: linear-gradient(135deg, hsl(var(--background)), hsl(var(--background-secondary)));
+}
+
+.section-pricing {
+  @apply relative overflow-hidden bg-muted/30;
+}
+
+.dark .section-pricing {
+  background: linear-gradient(to bottom, hsl(var(--background-secondary)), hsl(var(--background)));
+}
+
+.section-testimonials {
+  @apply relative overflow-hidden;
+  background: linear-gradient(135deg, hsl(var(--background-secondary)) 0%, hsl(var(--background)) 100%);
+}
+
+.dark .section-testimonials {
+  background: linear-gradient(135deg, hsl(var(--background-secondary)), hsl(var(--background)));
+}
+
+.section-divider {
+  @apply h-16 md:h-24;
+}
+
+.gradient-border {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(45deg,
+      hsl(var(--primary)),
+      hsl(var(--secondary)),
+      hsl(var(--accent)),
+      hsl(var(--primary)));
+  background-size: 400% 400%;
+  animation: gradient-border-animation 8s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes gradient-border-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.float-element {
+  animation: float-animation 6s ease-in-out infinite;
+}
+
+.float-element-slow {
+  animation: float-animation 8s ease-in-out infinite;
+}
+
+.float-element-fast {
+  animation: float-animation 4s ease-in-out infinite;
+}
+
+@keyframes float-animation {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.theme-toggle-sun {
+  filter: drop-shadow(0 0 8px rgba(250, 204, 21, 0.5));
+}
+
+.theme-toggle-moon {
+  filter: drop-shadow(0 0 8px rgba(148, 163, 184, 0.5));
+}
+
+.dark .theme-toggle-moon {
+  filter: drop-shadow(0 0 8px rgba(226, 232, 240, 0.5));
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.wave-animation {
+  animation: wave-animation 15s linear infinite;
+}
+
+.section-divider-glow {
+  filter: drop-shadow(0 0 5px rgba(var(--primary), 0.3));
+}
+
+.dark .section-divider-glow {
+  filter: drop-shadow(0 0 8px rgba(var(--primary), 0.4));
+}
+
+.dark .dashboard-bg {
+  background-image: radial-gradient(circle at 20% 30%, hsl(var(--primary) / 0.15) 0%, transparent 25%),
+    radial-gradient(circle at 80% 70%, hsl(var(--secondary) / 0.1) 0%, transparent 20%);
+}
+
+.dark .stat-card-gradient {
+  background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--card) / 0.8));
+}
+
+.dark .stat-card-accent {
+  border-left: 3px solid hsl(var(--primary));
+}
+
+.dark .performance-card-positive {
+  background: linear-gradient(145deg, hsl(var(--card)), hsl(160 84% 39% / 0.05));
+  border-left: 3px solid hsl(160 84% 39%);
+}
+
+.dark .performance-card-negative {
+  background: linear-gradient(145deg, hsl(var(--card)), hsl(var(--destructive) / 0.05));
+  border-left: 3px solid hsl(var(--destructive));
+}
+
+.no-tailwind {
+  all: revert;
+}
